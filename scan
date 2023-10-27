@@ -1,0 +1,7 @@
+#! /usr/bin/env zsh
+
+LOGFILE="LAN-$(date)"
+
+arp-scan -lv > $LOGFILE 2>&1
+./stats $LOGFILE 
+
